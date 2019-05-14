@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node index.ts"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@furystack/core": "^4.0.3",
-    "@furystack/http-api": "^3.0.3",
+    "@furystack/core": "^4.0.4",
+    "@furystack/http-api": "^3.1.0",
     "ts-node": "^8.1.0",
     "tslib": "^1.9.3",
     "typescript": "^3.4.5"
