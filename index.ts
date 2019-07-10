@@ -10,8 +10,8 @@ const injector = new Injector()
   .useHttpApi({})
   .useHttpAuthentication()
   .useDefaultLoginRoutes()
-  .addHttpRouting(msg => {
-    const urlPathName = parse(msg.url || "", true).pathname;
+  .addHttpRouting(i => {
+    const urlPathName = parse(i.getRequest().url || "", true).pathname;
     if (urlPathName === "/helloWorld") {
       return HelloWorldAction;
     }
