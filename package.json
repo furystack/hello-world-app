@@ -12,8 +12,8 @@
   "dependencies": {
     "@furystack/core": "^6.0.5",
     "@furystack/http-api": "^5.3.3",
-    "@furystack/repository": "^2.0.8",
-    "@furystack/odata": "^2.1.5"
+    "@furystack/odata": "^2.1.5",
+    "@furystack/repository": "^2.0.8"
   },
   "devDependencies": {
     "@types/node": "^12.12.7",

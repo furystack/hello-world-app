@@ -1,12 +1,13 @@
 import { Injector } from "@furystack/inject";
 import { ConsoleLogger } from "@furystack/logging";
-import { User, StoreManager } from "@furystack/core";
+import { User, StoreManager, InMemoryStore } from "@furystack/core";
 import { HttpAuthenticationSettings } from "@furystack/http-api";
 import { HelloWorldAction } from "./hello-world-action";
 import { parse } from "url";
 
 const injector = new Injector()
   .useLogging(ConsoleLogger)
+  .setupStores(sm=>sm.addStore(new InMemoryStore({model: User, primaryKey: 'username'})))
   .useHttpApi({})
   .useHttpAuthentication()
   .useDefaultLoginRoutes()
